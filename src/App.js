@@ -1,12 +1,17 @@
 import React from "react";
-import Api from "./api";
+import { Load } from "./api";
+import Image from "./image";
 
-const App = () => {
+function App() {
+	const data = Load();
+	console.log(data);
 	return (
 		<>
-			<Api />
+			{data.map((image) => (
+				<Image src={image.urls.thumb} />
+			))}
 		</>
 	);
-};
+}
 
 export default App;
