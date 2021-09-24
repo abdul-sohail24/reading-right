@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const Api = () => {
-	const [number, setNumber] = useState(24);
-	return (
-		<>
-			<h1>{number}</h1>
-			<button onClick={() => setNumber(number + 1)}>Click here</button>
-		</>
-	);
-};
+function Load() {
+	const [state, setState] = useState([]);
+	axios
+		.get(
+			"http://api.unsplash.com/photos?client_id=9qzpPMCI079pQAI2o4KLwKdOD3TO7BLzgdeTG2Ljdb8"
+		)
+		.then((data) => {
+			console.log(data);
+		});
+}
 
-export default Api;
+export { Load };
