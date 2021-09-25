@@ -1,6 +1,6 @@
 {
   "name": "reading_right",
-  "homepage" : "https://abdul-sohail24.github.io/reading-right",
+  "homepage": "https://abdul-sohail24.github.io/reading-right",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
