@@ -3,6 +3,7 @@ import { Load } from "./api";
 // import { Search } from "./search";
 import Image from "./image";
 import { SearchImages } from "./api";
+import "./App.css";
 
 function App() {
 	// Search Data
@@ -25,8 +26,8 @@ function App() {
 			<button type="button" onClick={search} className="btn btn-danger">
 				Search
 			</button>
-			<div className="row">
-				<div className="col-8">{search}</div>
+			<div className="contain_data">
+				<div>{search}</div>
 				{/* Display Search Data when entered Data else Random*/}
 				{searchQuery
 					? searchData.map((image, key) => (
