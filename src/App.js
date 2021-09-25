@@ -14,7 +14,7 @@ function App() {
 		setSearch(query);
 	};
 
-	const searchData = SearchImages(query);
+	const searchData = SearchImages(searchQuery);
 	console.log(searchData);
 	// Load Data
 	const data = Load();
@@ -27,18 +27,16 @@ function App() {
 			</button>
 			<div className="row">
 				<div className="col-8">{search}</div>
-				{/* Load Data */}
-				{/* <div className="col-12">
-					{data.map((image, key) => (
-						<Image src={image.urls.thumb} key={key} />
-					))}
-				</div> */}
-				{/* Display Data */}
-				<div className="col-12">
-					{searchData.map((image, key) => (
-						<Image src={image.urls.thumb} key={key} />
-					))}
-				</div>
+				{/* Display Search Data when entered Data else Random*/}
+				{searchQuery
+					? searchData.map((image, key) => (
+							<Image src={image.urls.thumb} key={key} />
+					  ))
+					: data.map((image, key) => (
+							<Image src={image.urls.thumb} key={key} />
+					  ))}
+
+				{/* Used Ternary Operator */}
 			</div>
 		</>
 	);
