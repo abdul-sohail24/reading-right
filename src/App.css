@@ -11,3 +11,42 @@
 	margin: 0;
 	padding: 5px;
 }
+
+.input_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.center_text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.find_button {
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+	.contain_data {
+		columns: 1;
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+	.contain_data {
+		columns: 2;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	.contain_data {
+		columns: 3;
+	}
+}
